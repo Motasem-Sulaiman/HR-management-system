@@ -5,26 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<a href="index.html">Home</a>
-<a href="accounting.html">accounting</a>
+ 
+<header id="head">
+    <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="accounting.html">accounting</a></li>
+</ul>
 </header>
 
 
 <main>
-<script src="app.js"></script>
+<section>
+<form id="employeeForm">
+ <fieldset>
+   <legend>Add Employee</legend>
+
+<label for="">Full name</label>
+<input type="text" id="Name" name="Name">
+<label for="">Department</label>
+<select name="Dep" id="Dep">
+<option value="Administration" id="Admin" name="Admin">Administration</option>
+<option value="Marketing" id="Mar" name="Mar">Marketing</option>
+<option value="Development" id="Dev" name="Dev">Development</option>
+<option value="Finance" id="Fina" name="Fina">Finance</option>
+</select>
+
+<select name="Level" id="Level">Level
+<option value="Junior">Junior</option>
+<option value="Mid-Senior">Mid-Senior</option>
+<option value="Senior">Senior</option>
+
+</select>
+
+<label for="">Image url</label>
+<input type="text" id="img" name="img">
+<label for="">Salary</label>
+<input type="text" id="sal" name="sal">
+<input type="submit" value="Add Employee">
+
+ </fieldset>
 
 
+</form>
+
+
+
+
+</section>
+<div class="container">
+<section id="empSection" class="cont"></section>
+<section id="deSection" class="cont"></section>
+<section id="de2Section" class="cont"></section>
+<section id="de3Section" class="cont"></section>
+
+</div>
 </main>
     <footer>
-        Contact
-        <a href="https://www.facebook.com/">Facebook</a>
-        <a href="https://instagram.com">Instagram</a>
-        &copy;
+       <p> Contact<p>
+        <ul>
+       <li> <a href="https://www.facebook.com/">Facebook</a></li>
+       <li>  <a href="https://instagram.com">Instagram</a></li>
+       </ul>
+       <p> &copy;<p>
 
     </footer>
-
+    <script src="app.js"></script>
 </body>
 </html>

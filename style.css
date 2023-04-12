@@ -64,16 +64,17 @@ input[type=submit] {
   font-size: 30px;}
   .container {
     display:flex;
-
+ 
   }
 
   .cont{
 
-padding:3%
-
- }
+    padding:3%;
+    margin:3%;
+     }
  p{color:#ECECEC}
  img{
 
+    width: 55%;
     border-radius: 50% ;
  }

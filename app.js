@@ -6,9 +6,9 @@ let de2Section=document.getElementById("de2Section");
 let de3Section=document.getElementById("de3Section");
 let myForm=document.getElementById("employeeForm");
 let emp=[]
-function Employee(fullName,department,level,imageURL,salary){
+function Employee(employeeID,fullName,department,level,imageURL,salary){
 
-this.employeeID=0;
+this.employeeID=employeeID;
 this.fullName=fullName;
 this.department=department;
 this.level=level;
@@ -47,12 +47,13 @@ Employee.prototype.uniqueID= function(){
 myForm.addEventListener("submit",handleSubmit);
 function handleSubmit(event){
   event.preventDefault();
+let employeeID=0;
 let fullName= event.target.Name.value;
 let department=event.target.Dep.value;
 let level =event.target.Level.value
 let img=event.target.img.value;
 // let salary=event.target.sal.value;
-let newEmployee= new Employee(fullName,department,level,img)
+let newEmployee= new Employee(employeeID,fullName,department,level,img)
 newEmployee.calcRandom();
 newEmployee.uniqueID();
 newEmployee.render();
@@ -193,17 +194,16 @@ Employee.prototype.render=function(){
 
 
 
-let Ghazi=new Employee("Ghazi Samer","Administration","Senior","./assets/Ghazi.jpg")
-let Lana=new Employee("Lana Ali","Finance","Senior","./assets/Lana.jpg")
-let Tamara=new Employee("Tamara Ayoub","Marketing","Senior","./assets/Tamara.jpg")
-let Safi=new Employee("Safi Walid","Administration","Mid-Senior","./assets/Safi.jpg")
-let Omar=new Employee("Omar Zaid","Development","Senior","./assets/Omar.jpg")
-let Rana=new Employee("Rana Saleh","Development","Junior","./assets/Rana.jpg")
-let Hadi=new Employee("Hadi Ahmad","Finance","Mid-Senior","./assets/Hadi.jpg")
+let Ghazi=new Employee(1000,"Ghazi Samer","Administration","Senior","./assets/Ghazi.jpg")
+let Lana=new Employee(1001,"Lana Ali","Finance","Senior","./assets/Lana.jpg")
+let Tamara=new Employee(1002,"Tamara Ayoub","Marketing","Senior","./assets/Tamara.jpg")
+let Safi=new Employee(1003,"Safi Walid","Administration","Mid-Senior","./assets/Safi.jpg")
+let Omar=new Employee(1004,"Omar Zaid","Development","Senior","./assets/Omar.jpg")
+let Rana=new Employee(1005,"Rana Saleh","Development","Junior","./assets/Rana.jpg")
+let Hadi=new Employee(1006,"Hadi Ahmad","Finance","Mid-Senior","./assets/Hadi.jpg")
 
 for(let i=0;i<emp.length;i++){
   emp[i].calcRandom()
-emp[i].uniqueID()
 emp[i].render()
 
 

@@ -7,5 +7,6 @@ let user = localStorage.getItem('employee');
  let newArr=JSON.parse(user)
 
 for(let i=0;i<newArr.length;i++){
-let x =newArr[i].fullName;
- console.log(x)}
+    if(newArr[i].department==="Development"){
+let x =newArr[i].department;
+ console.log(x)}}

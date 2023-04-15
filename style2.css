@@ -28,7 +28,7 @@ li a{
 }
 
 table,th,td{
-    margin-left :10%;
+  
     margin-top :7%;
     
 text-align: center;
@@ -43,7 +43,8 @@ td{
 footer{
     
     background-color: #435560;
-       margin-top: 35%;
+    margin-top: 35%;
        text-align: center;
        height: 100px;
    }
+
